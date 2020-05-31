@@ -10,8 +10,6 @@ tar zxf tcloud.tgz -C tcloud --strip-components 1
 
 echo "===== Install dependencies ====="
 cd tcloud
-npm install --only=prod
-
 echo "===== Create config.json ====="
 echo '{' >> /app/tcloud/config.json
 echo '  "log": {' >> /app/tcloud/config.json
@@ -47,3 +45,5 @@ echo '  },' >> /app/tcloud/config.json
 echo '  "adminUser": "adminko"' >> /app/tcloud/config.json
 echo '}' >> /app/tcloud/config.json
 sed -i 's/mymasterkey$/'$(printf '%03d' $((RANDOM%900)) && printf '%03d' $((RANDOM%900)) && printf 'm@ster' && printf '%03d' $((RANDOM%900)) && printf '%03d' $((RANDOM%900)) && printf '%03d' $((RANDOM%900)))'/' /app/tcloud/config.json
+
+npm install --only=prod
