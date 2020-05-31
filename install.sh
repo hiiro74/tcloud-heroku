@@ -20,7 +20,7 @@ echo '    "path": "logs/"' >> config.json
 echo '  },' >> config.json
 echo '  "server": {' >> config.json
 echo '    "port": 5000,' >> config.json
-echo '    "masterKey": "mymasterkey",' >> config.json
+echo '    "masterKey": "mymasterkey123",' >> config.json
 echo '    "https": false,' >> config.json
 echo '    "hostname": "",' >> config.json
 echo '    "certs": {' >> config.json
@@ -47,4 +47,4 @@ echo '    }' >> config.json
 echo '  },' >> config.json
 echo '  "adminUser": "adminko"' >> config.json
 echo '}' >> config.json
-sed -i 's/mymasterkey$/'$(printf '%03d' $((RANDOM%900)) && printf '%03d' $((RANDOM%900)) && printf 'm@ster' && printf '%03d' $((RANDOM%900)) && printf '%03d' $((RANDOM%900)) && printf '%03d' $((RANDOM%900)))'/' config.json
+sed -i 's/mymasterkey123/'$(printf '%03d' $((RANDOM%900)) && printf '%03d' $((RANDOM%900)) && printf 'm@ster' && printf '%03d' $((RANDOM%900)) && printf '%03d' $((RANDOM%900)) && printf '%03d' $((RANDOM%900)))'/' ./config.json
