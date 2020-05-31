@@ -13,6 +13,7 @@ cd tcloud
 npm install --only=prod
 
 echo "===== Create config.json ====="
+touch /app/tcloud/config.json
 echo '{' >> /app/tcloud/config.json
 echo '  "log": {' >> /app/tcloud/config.json
 echo '    "path": "logs/"' >> /app/tcloud/config.json
